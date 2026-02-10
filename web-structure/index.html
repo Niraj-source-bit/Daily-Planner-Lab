@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner - Logic Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="planner-app">
+        <header>
+            <h1>My Day</h1>
+            <p id="date-display"></p>
+        </header>
+
+        <section class="input-section">
+            <input type="text" id="task-input" placeholder="What needs to be done?">
+            <select id="priority-input">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button id="add-btn">Add Task</button>
+        </section>
+
+        <section class="filter-section">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="high">High Priority</button>
+        </section>
+
+        <ul id="task-list">
+            </ul>
+
+        <div id="empty-state">
+            <p>Your day is clear! Add a task to start.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

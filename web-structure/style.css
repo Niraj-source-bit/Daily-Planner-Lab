@@ -1,0 +1,66 @@
+:root {
+    --high: #ff4757;
+    --medium: #ffa502;
+    --low: #2ed573;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f1f2f6;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.planner-app {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input { flex: 2; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+select { flex: 1; border-radius: 5px; border: 1px solid #ddd; }
+
+#task-list { list-style: none; padding: 0; }
+
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 6px solid #ccc;
+    transition: transform 0.2s;
+}
+
+.task-item.high { border-left-color: var(--high); }
+.task-item.medium { border-left-color: var(--medium); }
+.task-item.low { border-left-color: var(--low); }
+
+.task-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.task-text { flex-grow: 1; margin-left: 10px; }
+
+.delete-btn {
+    background: #ff7675;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hidden { display: none; }
